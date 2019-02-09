@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>
+			Login Page
+		</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style2.css') }}">
+	</head>
+	<body>
+		<div class="loginbox">
+			<h1>Forgot Password</h1>
+			<form action="/forgotPassword" method="POST">
+				<p>Email</p>
+				<input type="email" name="email_address" placeholder="Enter Email Address">
+				<p>Phone No.</p>
+				<input type="text" name="mobile" placeholder="Enter your contact number">
+				<input type="submit" name="submit" value="Submit">
+				<a href="/">Remembered your password? LOGIN HERE!</a><br/>
+				<a href="/signuppage">Don't have an account? SIGN UP!</a><br/>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,124 @@
+.logo{
+	
+	margin-bottom:0px;
+	
+}
+table{
+	width: 100%;
+	border-collapse:collapse;
+	
+}
+
+td{
+	width:50%;
+	
+}
+
+.image{
+	
+	padding-left:120px;
+	
+
+	
+}
+p{
+	font-family: 'Raleway', cursive;
+}
+
+.name{
+	
+	font-family: 'Raleway', cursive;
+	color:#0033cc;
+	
+}
+
+.name:hover{
+	
+	transform: scale(1.2);
+}
+
+ul{ 
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	
+}
+ 
+ul li{
+	float: left;
+	list-style:none;
+	text-align:center;
+	display: block;
+	position:relative;
+	width:25%;
+	z-index:1000;
+			
+}
+
+li ul{
+	display: none;
+}
+
+ul li a{
+	display: block;
+	text-decoration:none;
+	color:#FFF;
+	padding: 15px 10px 15px 10px;
+	background-color:#333;
+		
+}
+
+li:hover ul{
+	display: block;
+	width:100%;
+	position: absolute;
+		
+}
+
+li:hover ul li{
+	
+	width:100%;
+}
+
+li a:hover{
+	
+	background-color:#009933;
+	text-decoration:none;
+	color:#FFF;
+}
+
+li ul li ul li{
+	
+	display:none;
+	
+}
+
+li:hover ul li:hover ul li{
+	
+	display:block;
+	left:100%;
+	bottom:48px;
+	
+}
+
+.Price{
+	
+	color:#000;
+	
+}
+
+.rightAlign{
+	position:relative;
+	left: 120px;
+	bottom: 34px;
+	background-color:#008CBA;
+	
+}
+
+.heading{
+	font-family: 'Raleway', cursive;
+	color:#000;
+	text-align:right;
+	font-size:17px;
+		
+}

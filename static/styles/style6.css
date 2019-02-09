@@ -1,0 +1,42 @@
+p{
+	
+	text-align:Left;
+	padding-left:200px;
+	font-family: 'Raleway', cursive;
+	font-weight:bold;
+}
+
+body{
+	
+	background:url(../Images/background3.jpg);
+	background-position:center;
+	background-size:cover;
+	
+	
+}
+
+table{
+	border-collapse: collapse;
+	width:80%;
+	
+}
+
+td{
+	height:50px;
+	width:50%;
+	
+}
+
+.heading{
+	
+	font-family: "Spicy rice", cursive;
+	text-align:center;
+	
+}
+
+#buy{
+	
+	margin-right:100px;
+	height:50px;
+	
+}

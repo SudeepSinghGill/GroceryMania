@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>User Details</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style6.css') }}"> 
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+		
+	
+	</head>	
+	<body>
+		
+		<h2 class="heading">Address Details</h2>
+		<form action="/AddDetails" method="POST">
+		<table>
+			<tr>
+				<td>
+					<p>Home No.</p>
+				</td>
+				<td>
+					<input type="text" class="form-control" name="HomeNo" placeholder="Home No."/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Locality</p>
+				</td>
+				<td>
+					<input type="text" class="form-control" name="Locality" placeholder="Locality"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>City</p>
+				</td>
+				<td>
+					<input type="text" class="form-control" name="City" placeholder="City"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>State</p>
+				</td>
+				<td>
+					<input type="text" class="form-control" name="State" placeholder="State"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Pincode</p>
+				</td>
+				<td>
+					<input type="text" class="form-control" name="Pincode" placeholder="Pincode"/>
+				</td>
+			</tr>
+		</table>
+		<br/>
+		<br/>
+		<br/>
+		<input type="submit" name="proceed" value ="Proceed" class="btn btn-success pull-right" id="buy" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+<head>
+
+</head>
+<body>
+	
+	<img src="{{ url_for('static',filename='images/logo.jpg') }}" align="left" height="120px">
+	<p align="right">Welcome {{session['username']}}</p>
+	<br/>
+
+	<a href="/carts"><img src="{{ url_for('static',filename='images/carts.png') }}" align="right" height="50px" class="logo"></a>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	
+		<ul>
+			<li><a href="/home">Home</a></li>
+			<li><a href="#">Shop By Category</a>
+			<ul>
+				<li><a href="#">Fruits & Vegetables</a>
+					<ul>
+						<li><a href="/Vegetables">Fresh Vegetables</a></li>
+						<li><a href="/Fruits">Fresh Fruits</a></li>
+
+					</ul>
+				</li>
+				<li><a href="/Grains">Grains & Pulses</a>
+				</li>
+				<li><a href="/Dairy">Bakery & Dairy</a>
+				</li>
+				<li><a href="/Cleaning">Cleaning & Household</a>
+				</li>
+				<li><a href="/Beverages">Beverages</a>
+				</li>
+				<li><a href="/Beauty">Beauty & hygiene</a>
+				</li>
+				<li><a href="/BabyCare">Baby Care</a>
+				</li>
+				<li><a href="/Snacks">Snacks & Branded Foods</a>
+				</li>
+			</ul>
+			<li><a href="#">Your Account</a>
+				<ul>
+					<li><a href="/AccountInfo">Account Information</a></li>
+					<li><a href="/pastOrders">Past Orders</a></li>
+				</ul>
+			</li>
+			<li><a href="/logout">LOG OUT</a></li>
+		</ul> 
+
+</body>
+</html>

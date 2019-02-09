@@ -1,0 +1,82 @@
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style5.css') }}"> 
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet"> 
+ 
+</head>
+<body>
+	
+	{% include 'TopBar.html' %}
+		</ul> 
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		{% if check == 1 %}
+		<table border="1">
+			<tr>
+				<td>
+				<h2>S.No</h2>
+				</td>
+				<td>
+				<h2>Name</h2>
+				</td>
+				<td>
+				<h2>Quantity</h2>
+				</td>
+				<td>
+				<h2>Price</h2>
+				</td>
+				<td colspan="2">
+				<h2>Total Amount</h2>
+				</td>
+			</tr>
+			{% for item in data %}
+			<tr>
+				<td>
+				<h3 class="Price">{{ loop.index }}</h3>
+				</td>
+				<td>
+				<h3 class="blue">{{data[item]['Name']}}</h3>
+				</td>
+				<td>
+				<h3 class="Price">{{data[item]['Quantity']}}</h3>
+				</td>
+				<td>
+				<h3 class="Price">Rs. {{data[item]['Price']}}</h3>
+				</td>
+				<td>
+				<h3 class="Price">Rs. {{data[item]['Amount']}}</h3>
+				</td>
+				<td>
+				<a href ="/deleteItem/{{item}}"><img src= "{{ url_for('static',filename='images/deleteItem.png') }}"  height="30px" width="30px"/></a>
+				</td>
+						
+			</tr>
+
+			{% endfor %}
+			<tr>
+				<td colspan="4"><h3 class="Price">Total amount to be paid : </h3>
+				</td>
+				<td colspan="2">
+				<h3 class="Price">Rs. {{bill}}</h3>
+				</td>
+			</tr>
+
+			
+		</table>
+		<a href="/takeAddress" class="logo"><img src="{{ url_for('static',filename='images/Checkout.jpg') }}" align="right" height="140px" class="logo"></a>
+		<a href="/emptyCart"><img src="{{ url_for('static',filename='images/delete.png') }}" align="left" height="140px" style="margin-top:150px;" /></a>
+		<p style="position:relative; top:268px; Right:112px" class="Delete">Empty Cart</p>
+		
+		{% else %}
+		<img src= "{{ url_for('static',filename='images/empty_cart.png') }}"  style="padding-left:200px;"/>
+		
+		{% endif %}
+			
+			
+</body>
+</html>

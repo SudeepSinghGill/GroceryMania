@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+			Signup Page
+		</title>
+		<script type="text/javascript">
+		{
+			var image_track = 'M';
+			function change(){
+				var image = document.getElementById('avatars');
+				
+				if(image_track=='M')
+				{
+					image.src = "{{ url_for('static',filename='images/avatar_female.jpg') }}";
+					image_track = 'F';
+				}
+				
+				else
+				{
+					image.src = "{{ url_for('static',filename='images/avatar.png') }}";
+					image_track = 'M';
+				}
+				
+				var hide = document.getElementById("txt");
+				hide.style.display= "none";
+				
+			}
+		
+		}
+		</script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style2.css') }}">
+	</head>
+	<body>
+		<div class="loginbox">
+			<img src="{{ url_for('static',filename='images/avatar.png') }}" class="avatar" id="avatars" onclick="change()">
+			<h6 class="blinking" id ="txt">CHOOSE YOUR AVATAR</h6>
+			<h1>SIGN UP</h1>
+			<form method="POST" action="/signup">
+				<p>Email</p>
+				<input type="email" name="email_address" placeholder="Enter Email Address">
+				<p>Username</p>
+				<input type="text" name="user" placeholder="Enter Username">
+				<p>Password</p>
+				<input type="password" name="pass" placeholder="Set Password">
+				<p>Phone No.</p>
+				<input type="text" name="mobile" placeholder="Enter your contact number">
+				<input type="submit" name="submit" value="Submit">
+				<a href="/">Already registered? LOG IN!</a><br/>
+			</form>
+		</div>
+	</body>
+</html>

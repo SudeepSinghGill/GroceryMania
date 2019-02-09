@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Fruits</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style4.css') }}"> 
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+ 
+</head>
+<body>
+	{% include 'TopBar.html' %}
+		{% for item in data %}
+		<form method="POST" action="/AddFruits" >
+			<table>
+				<tr>
+					<td class="image">
+					<img src="{{ url_for('static',filename=item[3] ) }}" height="130px" width="150px"/>
+					</td>
+					<td>
+					<h3 class="name">{{item[1]}}</h3>
+					<h3 class="Price">Rs. {{item[2]}}</h3>
+					<input type="number" name = "quantity" class="form-control" value="1" style="width:50px" min="1"/>
+					<input type="hidden" name="ID" value="{{item[0]}}" />
+					<input type="hidden" name="name" value="{{item[1]}}" />
+					<input type="hidden" name="price" value="{{item[2]}}" />
+					<input type="submit" name="Add"  value="Add to Cart" class="btn btn-info rightAlign" />
+					</td>
+									
+				</tr>	
+			</table>
+		</form>
+	{% endfor %}	
+</body>
+</html>

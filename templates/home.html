@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>Home Page</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style3.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+ 
+</head>
+<body>
+	{% include 'TopBar.html' %}
+	
+	<div class="products">
+	<h1>Our Products</h1>
+	
+	<table>
+		<tr>
+			<td class="baby">
+				<h3> </h3>
+			</td>
+			<td><h3> </h3></td>
+			<td class="bakery"><h3> </h3></td>
+			
+		</tr>
+		<tr>
+			<td class="text">
+				<h3><a href="#">Baby Care</a></h3>
+			</td>
+			<td class="text"><h3><a href="#"> </a></h3></td>
+			<td class="text"><h3><a href="#">Bakery & Dairy</a></h3></td>
+			
+		</tr>
+	
+		<tr>
+			<td class="beverages">
+				<h3></h3>
+			</td>
+			<td class="cleaning"><h3> </h3></td>
+			<td class="grocery"><h3> </h3></td>
+			
+		</tr>
+		<tr>
+			<td class="text">
+			<h3><a href="#">Beverages</a></h3>
+			</td>
+			<td class="text"><h3><a href="#">Cleaning & Household</a></h3></td>
+			<td class="text"><h3><a href="#">Fruits and Vegetables</a></h3></td>
+			
+		</tr>
+		<tr>
+			<td class="Grains">
+				<h3> </h3>
+			</td>
+			<td class="hygiene"><h3> </h3></td>
+			<td class="snacks"><h3> </h3></td>
+			
+		</tr>
+		<tr>
+			<td class="text">
+			<h3><a href="#">Grains</a></h3>
+			</td>
+			<td class="text"><h3><a href="#">Beauty & Hygiene</a></h3></td>
+			<td class="text"><h3><a href="#">Snacks & Branded Foods</a></h3></td>
+			
+		</tr>
+	</table>
+	</div>
+		
+</body>
+</html>
