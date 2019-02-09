@@ -1,2 +1,0 @@
-# GroceryMania
-Online Shopping Website
